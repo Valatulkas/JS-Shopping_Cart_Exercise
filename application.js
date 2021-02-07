@@ -4,7 +4,7 @@ var updateTotalPrice = function (ele) {
   var price = parseFloat($(ele).find('.price input').val());
   var quantity = parseFloat($(ele).find('.quantity input').val());
   var total = price * quantity;
-  $(ele).children('.total').html(total);
+  $(ele).children('.total').html('$' + total);
   return total;
 }
 
@@ -36,6 +36,11 @@ $(document).ready(function () {
     updateWishListTotal();
   });
 
+  $(document).on('click', '.calculateTotal', function(event) {
+    updateTotalPrice();
+    updateWishListTotal();
+  })
+
   var timeout;
   $('tr input').on('input', 'tr input', function () {
     clearTimeout(timeout);
@@ -50,7 +55,7 @@ $(document).ready(function () {
     var price = $(this).children('[name=price]').val();
     var quantity = $(this).children('[name=quantity]').val();
 
-    $('tbody').append('<tr>' + '<td class="name">' + name + '</td>' + '<td class="price"><input type="number" value="' + price + '" /></td>' + '<td class="quantity"><input type="number" value="' + quantity + '" /></td>' + '<td class="total"></td>' + '<td><button class="btn btn-light btn-sm remove">REMOVE</button></td>' + '</tr>');
+    $('tbody').append('<tr>' + '<td class="name">' + name + '</td>' + '<td class="price">$<input type="number" value="' + price + '" /></td>' + '<td class="quantity"><input type="number" value="' + quantity + '" /></td>' + '<td class="total"></td>' + '<td><button class="btn btn-light btn-sm remove">REMOVE</button></td>' + '</tr>');
 
     updateWishListTotal();
     $(this).children('[name=name]').val('');

@@ -1,3 +1,24 @@
-h2 {
-  font-style: italic;
+
+body {
+  background-image: url(./images/BC.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.name, .price, .quantity, .total, th {
+  text-align: center;
+}
+form {
+  text-align: center;
+}
+td > input {
+  width: 90px;
+}
+
+div > button {
+  background-color: deepskyblue;
+  width: 100px;
+  border-radius: 40px;
+  text-transform: uppercase;
 }

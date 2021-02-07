@@ -16,9 +16,14 @@ td > input {
   width: 90px;
 }
 
-div > button {
+div.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.btn > button {
   background-color: deepskyblue;
-  width: 100px;
   border-radius: 40px;
   text-transform: uppercase;
 }

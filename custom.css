@@ -16,14 +16,10 @@ td > input {
   width: 90px;
 }
 
-div.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-div.btn > button {
-  background-color: deepskyblue;
-  border-radius: 40px;
-  text-transform: uppercase;
+h2 {
+  border-style: solid;
+  border-color: deepskyblue;
+  border-width: thick;
+  border-radius: 26px;
+  margin: auto;
 }

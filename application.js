@@ -36,13 +36,8 @@ $(document).ready(function () {
     updateWishListTotal();
   });
 
-  $(document).on('click', '.calculateTotal', function(event) {
-    updateTotalPrice();
-    updateWishListTotal();
-  })
-
   var timeout;
-  $('tr input').on('input', 'tr input', function () {
+  $(document).on('input', 'tr input', function () {
     clearTimeout(timeout);
     timeout = setTimeout( function () {
       updateWishListTotal();
